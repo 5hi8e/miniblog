@@ -1,5 +1,5 @@
 from flask import request, redirect, url_for, render_template, flash, session
-from miniblog import app
+from flask import current_app as app
 from miniblog import db
 from miniblog.models.entries import Entry 
 from miniblog.views.views import login_required
