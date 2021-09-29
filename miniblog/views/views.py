@@ -17,10 +17,10 @@ def login_required(view):
 def login():
     error = None
     if request.method == 'POST':
-        if request.form['username'] != view.config['USERNAME']:
-            flash('ユーザ名がちがいます')
-        elif request.form['password'] != view.config['PASSWORD']:
-            flash('パスワードがちがいます')
+        if request.form['username'] != app.config['USERNAME']:
+            flash('ユーザ名が異なります')
+        elif request.form['password'] != app.config['PASSWORD']:
+            flash('パスワードが異なります')
         else:
             session['logged_in'] = True
             flash('ログインしました')
